@@ -1,0 +1,20 @@
+cff-version: 1.0.0
+message: "If you use this package, please include citation."
+authors:
+- family-names: "Lafci"
+  given-names: "Berkan"
+  orcid: "https://orcid.org/0000-0001-5387-1748"
+- family-names: "Robin"
+  given-names: "Justine"
+  orcid: "https://orcid.org/0000-0002-4642-1375"
+- family-names: "Dean-Ben"
+  given-names: "Xose Luis"
+  orcid: "https://orcid.org/0000-0002-8557-7778"
+- family-names: "Razansky"
+  given-names: "Daniel"
+  orcid: "https://orcid.org/0000-0001-8676-0964"
+title: "pyruct"
+version: 1.0.0
+doi: 
+date-released: 2021-12-31
+url: "https://github.com/berkanlafci/pyruct"
