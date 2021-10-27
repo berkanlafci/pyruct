@@ -43,7 +43,6 @@ das.fSampling           = 24e6              # sampling frequency
 das.numRxChannels       = 128               # number of reception channels
 das.numTxEvents         = 512               # number of transmission events
 
-
 #%% Define tranmission channels and delays
 traActiveChannels       = np.zeros((das.numTxEvents,das.numElements))
 traDelays               = np.zeros((das.numTxEvents,das.numElements))
