@@ -437,7 +437,7 @@ class cpuDAS():
         # calculate reception delay in samples
         receptionDelayInSamples = calculateDelay(fSampling, self.delayInSamples)
 
-        # loop trhorugh Tx events
+        # loop through Tx events
         for eventTxId in range(0, self.numTxEvents):
         # for eventTxId in range(0, 100):
 
