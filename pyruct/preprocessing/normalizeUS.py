@@ -1,6 +1,6 @@
 #-----
 # Description   : Normalization around mean value of each channel
-# Compatibility : Razansky Lab and iThera Systems
+# Compatibility : Razansky Lab Systems
 # Date          : October 2021
 # Author        : Berkan Lafci
 # E-mail        : lafciberkan@gmail.com
