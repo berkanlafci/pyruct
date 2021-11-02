@@ -39,7 +39,7 @@ def sigMatFilter(sigMat, lowCutOff=0.5e6, highCutOff=6e6, fSampling=40e6, fOrder
     highCutOff      = highCutOff / nyquistRatio
     lowF, highF     = butter(fOrder, [lowCutOff, highCutOff], btype='bandpass')
     
-    sigMatF = filtfilt(lowF, highF, sigMat, padlen=0)
+    sigMatF = filtfilt(lowF, highF, sigMat, padlen=0, axis=0)
 
     endTime = time.time()
     print('time elapsed: %.2f' %(endTime-startTime))

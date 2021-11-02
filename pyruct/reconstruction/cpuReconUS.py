@@ -419,7 +419,7 @@ class cpuDAS():
         startTime       = time.time()
 
         # hilbert transforms
-        analyticalSigMat    = hilbert(sigMatN)
+        analyticalSigMat    = hilbert(sigMatN, axis=0)
         realSigMat          = analyticalSigMat.real
         imagSigMat          = analyticalSigMat.imag
 
