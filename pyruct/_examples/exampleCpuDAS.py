@@ -15,7 +15,7 @@ logging.info('  Script      "exampleCpuDAS"     : exampleCpuDAS.py')
 import numpy as np
 import matplotlib.pyplot as plt
 
-# stop wiriting __pycache__ files
+# stop writing __pycache__ files
 import sys
 sys.dont_write_bytecode = True
 
@@ -37,7 +37,7 @@ das.speedOfSound        = 1490              # change SoS based on water temperat
 das.fieldOfView         = 0.024             # FOV to reconstruct (default: 0.03)
 das.pixelNumber         = 256               # increase this number for higher resolution (default: 128)
 das.cupType             = 'ring'            # ring, multisegment, virtualRing (default: ringCup)
-das.lowCutOff           = 0.5e6             # low cutoff for bandpass (default: 0.1e6)
+das.lowCutOff           = 2.5e6             # low cutoff for bandpass (default: 0.1e6)
 das.highCutOff          = 6e6               # high cutoff for bandpass (default: 6e6)
 das.fSampling           = 24e6              # sampling frequency
 das.numRxChannels       = 128               # number of reception channels
