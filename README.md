@@ -1,8 +1,7 @@
 pyruct
 =======================================================
 
-.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5599811.svg
-   :target: https://doi.org/10.5281/zenodo.5599811
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5599811.svg)](https://doi.org/10.5281/zenodo.5599811)
 
 Python Package for Reflection Ultrasound Computed Tomography (RUCT) Delay And Sum (DAS) Algorithm
 
