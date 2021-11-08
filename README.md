@@ -47,7 +47,7 @@ Citation
 -------------------------------------------------------
 If you use this package in your research, please cite it as follows
 
-Lafci, B., Robin, J., Dean-Ben, X. L., & Razansky, D. (2021). pyruct (Version 1.0.0) [Computer software]. https://doi.org/10.5281/zenodo.5599811
+Lafci, B., Robin, J., Dean-Ben, X. L., & Razansky, D. (2021). pyruct (Version 1.0.2) [Computer software]. https://doi.org/10.5281/zenodo.5599811
 
 Acknowledgements
 -------------------------------------------------------
