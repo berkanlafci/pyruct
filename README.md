@@ -3,9 +3,9 @@ pyruct
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5599811.svg)](https://doi.org/10.5281/zenodo.5599811)
 
-Python Package for Reflection Ultrasound Computed Tomography (RUCT) Delay And Sum (DAS) Algorithm
+Python Package for Reflection Ultrasound Computed Tomography (RUCT) Delay And Sum (DAS) Beamforming
 
-The imaging setup is explained in these papers [Lafci, B. et al.](https://www.sciencedirect.com/science/article/pii/S1476558620301639), [Merčep, E. et al](https://www.nature.com/articles/s41377-019-0130-5). Synthetic Transmit Aperture (STA) method for pulse-echo ultrasound was used in data acquistion. All images were reconstructed using Delay And Sum (DAS) algorithm and compounded to create final high contrast images.
+The imaging setup is explained in these papers [Lafci, B. et al.](https://www.sciencedirect.com/science/article/pii/S1476558620301639), [Merčep, E. et al](https://www.nature.com/articles/s41377-019-0130-5). Synthetic Transmit Aperture (STA) method for pulse-echo ultrasound was used in data acquisition. All images were reconstructed using Delay And Sum (DAS) algorithm and compounded to create final high contrast images.
 
 Installation
 -------------------------------------------------------
@@ -39,7 +39,7 @@ imageRecon  = das.recon(usData.sigMat)         	# reconstruct image
 
 Data
 -------------------------------------------------------
-Test data will be made publically available.
+Test data will be made publicly available.
 
 After the download, place the data in "data/rawData/" folder that shares the same root directory with "exampleCpuDAS.py" script that can be run for testing "pyruct".
 
