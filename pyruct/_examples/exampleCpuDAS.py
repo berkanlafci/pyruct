@@ -1,5 +1,5 @@
 #-----
-# Description   : Example script to use cpu delay and sum code
+# Description   : Example script to use cpu delay and sum beamforming code
 # Compatibility : Razansky Lab Systems
 # Date          : October 2021
 # Author        : Berkan Lafci
@@ -23,7 +23,7 @@ from pyruct import *
 
 #%% Data paths (defined by users)
 folderPath          = 'data/rawData'
-scanName            = 'allenKey_1_pos_1_nct_1_ncr_1_nst_1_nsr_1'
+scanName            = 'allenKey_1_pos_1'
 
 #%% read signal file
 usData              = usReader(folderPath=folderPath, scanName=scanName, averaging=False)
@@ -43,22 +43,20 @@ das.fSampling           = 24e6              # sampling frequency
 das.numRxChannels       = 128               # number of reception channels
 das.numTxEvents         = 512               # number of transmission events
 
-#%% Define tranmission channels and delays
-traActiveChannels       = np.zeros((das.numTxEvents,das.numElements))
-traDelays               = np.zeros((das.numTxEvents,das.numElements))
+#%% Define tranmission/reception channels and delays
+traActiveChannels       = np.zeros((das.numTxEvents, das.numElements))
+traDelays               = np.zeros((das.numTxEvents, das.numElements))
+activeChannels          = np.zeros((das.numTxEvents, das.numRxChannels+1))
 
-for traInd in range(das.numTxEvents):
-    traActiveChannels[traInd, traInd]   = 1
-    traDelays[traInd, traInd]           = 3255*(5.5e-9)
+traChannelIds           = np.linspace(0, das.numElements, num=das.numTxEvents, dtype=int, endpoint=False)
+
+for eventTxId in range(das.numTxEvents):
+    traActiveChannels[eventTxId, traChannelIds[eventTxId]]  = 1
+    traDelays[eventTxId, traChannelIds[eventTxId]]          = 3255*(5.5e-9)
+    activeChannels[eventTxId,:]                             = np.linspace(eventTxId-int(das.numRxChannels/2),eventTxId+int(das.numRxChannels/2), das.numRxChannels+1, dtype=int)%das.numElements
 
 das.traActiveChannels   = traActiveChannels
 das.traDelays           = traDelays
-
-#%% Define reception channels
-activeChannels          = np.zeros((das.numRxChannels+1, das.numElements))
-for colInd in range(512):
-    activeChannels[:, colInd] = np.linspace(colInd-int(das.numRxChannels/2),colInd+int(das.numRxChannels/2), das.numRxChannels+1, dtype=int)%das.numElements
-
 das.activeChannels      = activeChannels
 
 #%% Reconstruction
@@ -74,9 +72,9 @@ imageRecon          = das.reconDAS(sigMat)
 # save as png
 imageReconRotated = np.rot90(imageRecon,1)
 pngPath = 'data/pngImages'
-saveUsImagePng(reconObject=das, pngPath=pngPath, saveName='DAS_'+scanName, imageRecon=imageReconRotated)
+saveUsImagePng(reconObject=das, pngPath=pngPath, saveName=scanName, imageRecon=imageReconRotated)
 
 # save as mat
 imageReconRotated = np.rot90(imageRecon,1)
 matPath = 'data/matImages'
-saveUsImageMat(reconObject=das, matPath=matPath, saveName='DAS_'+scanName, imageRecon=imageReconRotated)
+saveUsImageMat(reconObject=das, matPath=matPath, saveName=scanName, imageRecon=imageReconRotated)

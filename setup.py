@@ -5,7 +5,7 @@ packages = find_packages(exclude=('pyruct.tests*', 'pyruct.*.tests*'))
 
 setup(
 	name="pyruct",
-	version="1.0.0",
+	version="1.0.3",
 	description = "Data processing tools for reflection ultrasound computed tomography (RUCT)",
 	author = "Berkan Lafci",
 	author_email = "lafciberkan@gmail.com",

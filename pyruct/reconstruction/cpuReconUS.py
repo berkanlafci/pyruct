@@ -402,10 +402,6 @@ class cpuDAS():
         ySensor             = self.ySensor
         fSampling           = self.fSampling
 
-        self.numTxEvents    = np.shape(sigMat)[2]
-        self.numTxChannels  = 1
-        self.numRxChannels  = np.shape(sigMat)[1]
-
         # filter sigMat
         sigMatF         = (-1)*sigMatFilter(sigMat, self.lowCutOff, self.highCutOff, fSampling, self.fOrder, 0.5)
 
@@ -441,8 +437,8 @@ class cpuDAS():
         for eventTxId in range(0, self.numTxEvents):
         # for eventTxId in range(0, 100):
 
-            traChannels         = np.array(np.where(self.traActiveChannels[:,eventTxId] == 1)).ravel()
-            receptionChannels   = self.activeChannels[:,eventTxId]
+            traChannels         = np.array(np.where(self.traActiveChannels[eventTxId,:] == 1)).ravel()
+            receptionChannels   = self.activeChannels[eventTxId,:]
 
             # loop through all Tx elements in one Tx event
             distTx = 300000000000000000
