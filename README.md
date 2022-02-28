@@ -5,6 +5,8 @@ pyruct
 
 Python Package for Reflection Ultrasound Computed Tomography (RUCT) Delay And Sum (DAS) Beamforming
 
+Documentation website: https://berkanlafci.github.io/pyruct/ 
+
 <img src="https://github.com/berkanlafci/pyruct/blob/main/docs/_img/readmeImage.png" width="1000" height="180">
 
 Hex key test data link:  
