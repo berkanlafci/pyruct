@@ -1,6 +1,5 @@
 #-----
 # Description   : Example script to use cpu delay and sum beamforming code
-# Compatibility : Razansky Lab Systems
 # Date          : October 2021
 # Author        : Berkan Lafci
 # E-mail        : lafciberkan@gmail.com
@@ -36,7 +35,7 @@ das                  = cpuDAS()
 das.speedOfSound        = 1490              # change SoS based on water temperature (default: 1480)
 das.fieldOfView         = 0.024             # FOV to reconstruct (default: 0.03)
 das.pixelNumber         = 256               # increase this number for higher resolution (default: 128)
-das.cupType             = 'ring'            # ring, multisegment, virtualRing (default: ringCup)
+das.cupType             = 'ring'            # ring (default: ring)
 das.lowCutOff           = 2.5e6             # low cutoff for bandpass (default: 0.1e6)
 das.highCutOff          = 6e6               # high cutoff for bandpass (default: 6e6)
 das.fSampling           = 24e6              # sampling frequency

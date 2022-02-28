@@ -1,6 +1,5 @@
 #-----
 # Description   : Beamformer functions on CPU
-# Compatibility : Razansky Lab Systems
 # Date          : October 2021
 # Author        : Berkan Lafci
 # E-mail        : lafciberkan@gmail.com
@@ -33,8 +32,8 @@ class cpuDAS():
     :param fSampling:           Sampling frequency of signals (default: 40e6)
     :param reconType:           Reconstruction type for backprojection (default: full)
     :param delayInSamples:      Active delay of signals
-    :param lowCutOff:           Low cut off frequency of bandpass filter in MHz (default: 0.1e6 MHz)
-    :param highCutOff:          High cut off frequency of bandpass filter in MHz (default: 6e6 MHz)
+    :param lowCutOff:           Low cut off frequency of bandpass filter in Hz (default: 0.1 MHz)
+    :param highCutOff:          High cut off frequency of bandpass filter in Hz (default: 6 MHz)
     :param fOrder:              Butterworth filter order
     :param traActiveChannels:   Active channels in transmission (numTxEvents x numChannels)
     :param traDelays:           Delays of active transmission channels (numTxEvents x numChannels)
@@ -63,9 +62,9 @@ class cpuDAS():
         self._traActiveChannels = {}
         self._traDelays         = {}
         self._activeChannels    = {}
-        self._numTxEvents      = {}
+        self._numTxEvents       = 512
         self.__numTxChannels    = {}
-        self._numRxChannels    = {}
+        self._numRxChannels     = 128
         
     #--------------------------------#
     #---------- properties ----------#

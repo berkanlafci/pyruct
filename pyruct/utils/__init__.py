@@ -1,6 +1,5 @@
 #-----
 # Description   : Data parser class for pyTropus
-# Compatibility : Razansky Lab Systems
 # Date          : February 2021
 # Author        : Berkan Lafci
 # E-mail        : lafciberkan@gmail.com

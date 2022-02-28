@@ -5,6 +5,8 @@ pyruct
 
 Python Package for Reflection Ultrasound Computed Tomography (RUCT) Delay And Sum (DAS) Beamforming
 
+<img src="https://github.com/berkanlafci/pyruct/blob/main/docs/_img/readmeImage.png" width="1000" height="180">
+
 The imaging setup is explained in these papers [Lafci, B. et al.](https://www.sciencedirect.com/science/article/pii/S1476558620301639), [Merčep, E. et al](https://www.nature.com/articles/s41377-019-0130-5). Synthetic Transmit Aperture (STA) method for pulse-echo ultrasound was used in data acquisition. All images were reconstructed using Delay And Sum (DAS) algorithm and compounded to create final high contrast images.
 
 Installation

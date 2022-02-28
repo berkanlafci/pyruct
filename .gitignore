@@ -131,5 +131,4 @@ dmypy.json
 # Up to here it is "Python" gitignore
 # add package specific ignores
 data/
-docs/
 .vscode
