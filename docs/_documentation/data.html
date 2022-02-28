@@ -1,0 +1,236 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Data &mdash; pyruct 1.0.4 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Arrays" href="arrays.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> pyruct
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readers.html">Data Readers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preprocessing.html">Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reconstruction.html">Reconstruction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arrays.html">Arrays</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ultrasound-data">Ultrasound Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#parameters">Parameters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyruct</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/_documentation/data.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data">
+<h1>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h1>
+<p>Test data for ultrasound (US) imaging is provided with this package in the following link: <a class="reference external" href="https://zenodo.org/record/5599242#.Yhz28Rso-EI">https://zenodo.org/record/5599242#.Yhz28Rso-EI</a></p>
+<p>After the download, place the data in “data/rawData/” folder that shares the same root directory with “exampleCpuDAS.py” script that can be run for testing “pyruct”.</p>
+<p>First dimension of the raw data is the number of samples and defined by “<em>nSamples</em>” variable in the modules. The second dimension contains the channels of transducer array which is defined automatically based on “<em>cupType</em>”. So, it is important to assign correct type of transducer array that was used in the data acquisition. The third dimension represents how many times acquisition of one frame or transmission event repeated.</p>
+<div class="section" id="ultrasound-data">
+<h2>Ultrasound Data<a class="headerlink" href="#ultrasound-data" title="Permalink to this headline">¶</a></h2>
+<p>US data was acquired using synthetic transmit aperture (STA) technique which uses single transducer elements to transmit unfocused US waves. All transducer elements were used to record reflected and transmitted US waves. Usually, the neighboring channels of transmitting channel contain reflected (pulse-echo) US waves which are used for reflection ultrasound computed tomography (RUCT) reconstructions.</p>
+<div class="section" id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h3>
+<p>There are some specific parameters that need to be known to reconstruct data.</p>
+<p><strong>Speed of Sound (SoS):</strong> Speed of the sound wave while it travels in the imaging medium. It is defined by the parameter “<em>speedOfSound</em>” in the reconstruction algorithms. Change of SoS based on temperature of the imaging medium (water for our data). Usually the phantom data is acquired at 1490 m/s and mouse data is acquired at 1540 m/s. Unit: “m/s” Default Value: “1480 m/n”</p>
+<p><strong>Imaging Array:</strong> Type of the imaging array. It is defined by the parameter “<em>cupType</em>” in the reconstruction functions. The array type used in the signal acquisition should match the array type defined by the user. Unit: ” ” Default Value: “ring”</p>
+<p><strong>Reception Delay:</strong> Raw data acquisition starts after reception delay defined by the operator who makes the data acquisition. It is defined by the parameter “<em>delayInSamples</em>” in reconstruction algorithms in this package.</p>
+<p><strong>Number of Transmission Events:</strong> Number of transmission events used in one acquisition. It is defined by the parameter “<em>numTxEvents</em>” in the reconstruction functions. For example, if the image acquisition is done with every single element in ring array, this results in 512 transmission event for one full acquisition. Unit: “elements” Default Value: “512”</p>
+<p><strong>Sampling Rate:</strong> Sampling rate of data acquisition system. It is defined by the parameter “<em>fSampling</em>” in the reconstruction functions. Sampling rate used in signal acquisition should match the sampling rate used in the reconstruction function. Unit: “samples” Default Value: “24 MSamples”</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="arrays.html" class="btn btn-neutral float-left" title="Arrays" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Berkan Lafci.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

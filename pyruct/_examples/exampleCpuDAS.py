@@ -22,7 +22,7 @@ from pyruct import *
 
 #%% Data paths (defined by users)
 folderPath          = 'data/rawData'
-scanName            = 'allenKey_1_pos_1'
+scanName            = 'hexKeyPhantom'
 
 #%% read signal file
 usData              = usReader(folderPath=folderPath, scanName=scanName, averaging=False)

@@ -1,0 +1,264 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Preprocessing &mdash; pyruct 1.0.4 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Reconstruction" href="reconstruction.html" />
+    <link rel="prev" title="Data Readers" href="readers.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> pyruct
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readers.html">Data Readers</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Preprocessing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#filtering">Filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#normalization">Normalization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reconstruction.html">Reconstruction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arrays.html">Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyruct</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Preprocessing</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/_documentation/preprocessing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="preprocessing">
+<h1>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">¶</a></h1>
+<p>Preprocessing tools to modify signals before reconstruction.</p>
+<div class="section" id="filtering">
+<h2>Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">¶</a></h2>
+<p>You need to filter signals before reconstruction. The bandpass filter helps to clip frequencies that you want to work with. The cutoff frequencies can be passed to reconstruction class as properties. Then the filtering will be applied inside the reconstruction module.</p>
+<span class="target" id="module-preprocessing.filterBandPass"></span><dl class="py function">
+<dt id="preprocessing.filterBandPass.sigMatFilter">
+<code class="sig-prename descclassname"><span class="pre">preprocessing.filterBandPass.</span></code><code class="sig-name descname"><span class="pre">sigMatFilter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sigMat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lowCutOff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">highCutOff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6000000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fSampling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">40000000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fOrder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conRatio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#preprocessing.filterBandPass.sigMatFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Band pass filtering for signals</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sigMat</strong> – 3D array (samples x channels x repetition) of signals</p></li>
+<li><p><strong>lowCutOff</strong> – Low cut off frequency of bandpass filter</p></li>
+<li><p><strong>highCutOff</strong> – High cut off frequency of bandpass filter</p></li>
+<li><p><strong>fSampling</strong> – Sampling frequency of signals</p></li>
+<li><p><strong>fOrder</strong> – Butterworth filter order</p></li>
+<li><p><strong>conRatio</strong> – Nyquist ratio percentage</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>3D filtered signal array</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="normalization">
+<h2>Normalization<a class="headerlink" href="#normalization" title="Permalink to this headline">¶</a></h2>
+<p>Normalization of signals over each channel of transducer array helps to improve image quality by scaling the signal intensities at the same range. It is highly recommended to normalize signals using module provided in preprocessing tools. Reconstruction functions involve the normalization step inside. There is no need to apply it beforehand.</p>
+<span class="target" id="module-preprocessing.normalizeUS"></span><dl class="py function">
+<dt id="preprocessing.normalizeUS.sigMatNormalizeUS">
+<code class="sig-prename descclassname"><span class="pre">preprocessing.normalizeUS.</span></code><code class="sig-name descname"><span class="pre">sigMatNormalizeUS</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sigMatIn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#preprocessing.normalizeUS.sigMatNormalizeUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Band pass filtering for signals</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sigMatIn</strong> – 3D array (samples x channels x repetition) of signals</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>3D array normalized around mean value of the channels</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="reconstruction.html" class="btn btn-neutral float-right" title="Reconstruction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="readers.html" class="btn btn-neutral float-left" title="Data Readers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Berkan Lafci.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

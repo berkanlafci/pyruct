@@ -1,0 +1,24 @@
+
+=================
+Preprocessing
+=================
+
+Preprocessing tools to modify signals before reconstruction.
+
+------------------------------
+Filtering
+------------------------------
+
+You need to filter signals before reconstruction. The bandpass filter helps to clip frequencies that you want to work with. The cutoff frequencies can be passed to reconstruction class as properties. Then the filtering will be applied inside the reconstruction module.
+
+.. automodule:: preprocessing.filterBandPass
+   :members:
+
+------------------------------
+Normalization
+------------------------------
+
+Normalization of signals over each channel of transducer array helps to improve image quality by scaling the signal intensities at the same range. It is highly recommended to normalize signals using module provided in preprocessing tools. Reconstruction functions involve the normalization step inside. There is no need to apply it beforehand.
+
+.. automodule:: preprocessing.normalizeUS
+   :members:

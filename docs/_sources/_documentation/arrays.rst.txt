@@ -1,0 +1,15 @@
+
+=================
+Arrays
+=================
+
+Transducer arrays used in data acquisitions. The files in "arrays" folder contain the position of individual transducer elements that are needed for image reconstruction.
+
+------------------------------------------------------------
+Ring Array
+------------------------------------------------------------
+Circular tomographic array used for optoacoustic and ultrasound data acquisition.
+
+It contains 512 transducer elements that are distributed equidistantly on two 174 degree half circles (256 transducer elements each half). The array has 348 degrees of angular coverage in total. The radius of array is 40 mm. Each individual element has dimensions of 0.37x15 mm2 and they are focused at 38 mm distance. The inter element pitch size is 0.47 mm. The array has 5 MHz central frequency. The bandwidth of the array at -3 dB is 60%.
+
+Detailed explanation about circular transducer array can be found in the following paper: `Lafci, B. et al <https://www.sciencedirect.com/science/article/pii/S1476558620301639>`_.

@@ -1,0 +1,23 @@
+
+pyruct documentation!
+====================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   _documentation/installation
+   _documentation/examples
+   _documentation/readers
+   _documentation/preprocessing
+   _documentation/reconstruction
+   _documentation/utils
+   _documentation/arrays
+   _documentation/data
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

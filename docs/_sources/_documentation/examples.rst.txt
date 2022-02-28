@@ -1,0 +1,49 @@
+
+===================================================
+Examples
+===================================================
+
+Example scripts to use main functions are also provided with the package under pyruct/_examples. If the package is installed correctly, all of the examples should run without errors.
+
+After the script runs, log files will be generated and saved under pyruct/_examples. The usage order of functions and property assignments can be followed using these log files.
+
+------------------------------------------------------------
+exampleCpuDAS.py
+------------------------------------------------------------
+
+Example script to run delay and sum (DAS) beamforming algorithm for reflection ultrasound computed tomography (RUCT) signals.
+
+The script follows the below order to create images from signal files:
+    - Create data reader class
+    - Read raw signals and acquisition info
+    - Create and assign properties for cpuReconUS class
+    - Bandpass filter signals
+    - Normalize signals for each channel
+    - Calculate delays to be used in reconstruction
+    - Apply delay and sum beamforming to generate RUCT images
+    - Save .png and .mat files of reconstructed RUCT images
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Parameters
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+There are some specific parameters that need to be known to reconstruct data.
+
+**Speed of Sound (SoS):** Speed of the sound wave while it travels in the imaging medium. It is defined by the parameter "*speedOfSound*" in the reconstruction algorithms. Change of SoS based on temperature of the imaging medium (water for our data). Usually the phantom data is acquired at 1490 m/s and mouse data is acquired at 1540 m/s. Unit: "m/s" Default Value: "1480 m/n"
+
+**Field of View (FOV):** Size of the reconstructed area. FOV can be assigned by the user based on the size of the imaged object. It is defined by the parameter "*fieldOfView*" in reconstruction algorithms. Unit: "meter" Default Value: "0.03 meters"
+
+**Number of Pixels:** Number of pixels in the reconstructed image. Height and width of the reconstructed images are assigned by this value. It is defined by the parameter "*pixelNumber*" in the reconstruction functions. Number of pixels can be increased to reconstruct high resolution images (up to resolution that is achieved by the transducer array). Unit: " " Default Value: "128"
+
+**Imaging Array:** Type of the imaging array. It is defined by the parameter "*cupType*" in the reconstruction functions. The array type used in the signal acquisition should match the array type defined by the user. Unit: " " Default Value: "ring"
+
+**Low Cutoff Frequency:** Low cutoff frequency of the band pass filter. It is defined by the parameter "*lowCutOff*" in the reconstruction functions. Unit: "Hz" Default Value: "0.1 MHz"
+
+**High Cutoff Frequency:** High cutoff frequency of the band pass filter. It is defined by the parameter "*highCutOff*" in the reconstruction functions. Unit: "Hz" Default Value: "6 MHz"
+
+**Sampling Rate:** Sampling rate of data acquisition system. It is defined by the parameter "*fSampling*" in the reconstruction functions. Sampling rate used in signal acquisition should match the sampling rate used in the reconstruction function. Unit: "samples" Default Value: "24 MSamples"
+
+**Number of Reception Channels:** Number of neighboring elements of transmitting element. It is defined by the parameter "*numRxChannels*" in the reconstruction functions. It defines the angle of reception. Reception angle above 90 degrees does not improve the image quality. 45 degrees (64 elements) is the optimal value that gives optimal reconstruction computing performance and image quality. Unit: "elements" Default Value: "128"
+
+**Number of Transmission Events:** Number of transmission events used in one acquisition. It is defined by the parameter "*numTxEvents*" in the reconstruction functions. For example, if the image acquistion is done with every single element in ring array, this results in 512 transmission event for one full acquistion. Unit: "elements" Default Value: "512"
+

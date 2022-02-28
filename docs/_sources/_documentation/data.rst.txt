@@ -1,0 +1,33 @@
+
+=================
+Data
+=================
+
+Test data for ultrasound (US) imaging is provided with this package in the following link: https://zenodo.org/record/5599242#.Yhz28Rso-EI
+
+After the download, place the data in "data/rawData/" folder that shares the same root directory with "exampleCpuDAS.py" script that can be run for testing "pyruct".
+
+First dimension of the raw data is the number of samples and defined by "*nSamples*" variable in the modules. The second dimension contains the channels of transducer array which is defined automatically based on "*cupType*". So, it is important to assign correct type of transducer array that was used in the data acquisition. The third dimension represents how many times acquisition of one frame or transmission event repeated.
+
+------------------------------------------------------------
+Ultrasound Data
+------------------------------------------------------------
+
+US data was acquired using synthetic transmit aperture (STA) technique which uses single transducer elements to transmit unfocused US waves. All transducer elements were used to record reflected and transmitted US waves. Usually, the neighboring channels of transmitting channel contain reflected (pulse-echo) US waves which are used for reflection ultrasound computed tomography (RUCT) reconstructions.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Parameters
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+There are some specific parameters that need to be known to reconstruct data.
+
+
+**Speed of Sound (SoS):** Speed of the sound wave while it travels in the imaging medium. It is defined by the parameter "*speedOfSound*" in the reconstruction algorithms. Change of SoS based on temperature of the imaging medium (water for our data). Usually the phantom data is acquired at 1490 m/s and mouse data is acquired at 1540 m/s. Unit: "m/s" Default Value: "1480 m/n"
+
+**Imaging Array:** Type of the imaging array. It is defined by the parameter "*cupType*" in the reconstruction functions. The array type used in the signal acquisition should match the array type defined by the user. Unit: " " Default Value: "ring"
+
+**Reception Delay:** Raw data acquisition starts after reception delay defined by the operator who makes the data acquisition. It is defined by the parameter "*delayInSamples*" in reconstruction algorithms in this package.
+
+**Number of Transmission Events:** Number of transmission events used in one acquisition. It is defined by the parameter "*numTxEvents*" in the reconstruction functions. For example, if the image acquisition is done with every single element in ring array, this results in 512 transmission event for one full acquisition. Unit: "elements" Default Value: "512"
+
+**Sampling Rate:** Sampling rate of data acquisition system. It is defined by the parameter "*fSampling*" in the reconstruction functions. Sampling rate used in signal acquisition should match the sampling rate used in the reconstruction function. Unit: "samples" Default Value: "24 MSamples"
