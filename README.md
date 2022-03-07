@@ -58,7 +58,7 @@ Lafci, B., Robin, J., Dean-Ben, X. L., & Razansky, D. (2021). pyruct (Version 1.
 
 Acknowledgements
 -------------------------------------------------------
-This project is supported by Swiss Data Science Center (SDSC).
+This project is supported by Swiss Data Science Center (SDSC) grant C19-04.
 
 References
 -------------------------------------------------------
