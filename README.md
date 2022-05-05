@@ -8,10 +8,10 @@ Python Package for Reflection Ultrasound Computed Tomography (RUCT) Delay And Su
 Package:  
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5599811.svg)](https://doi.org/10.5281/zenodo.5599811)
 
-Documentation website: https://berkanlafci.github.io/pyruct/ 
-
 Hex key test data:  
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5599242.svg)](https://doi.org/10.5281/zenodo.5599242)
+
+Documentation website: https://berkanlafci.github.io/pyruct/ 
 
 <img src="https://github.com/berkanlafci/pyruct/blob/main/docs/_img/readmeImage.png" width="1000" height="180">
 
