@@ -1,6 +1,8 @@
 pyruct
 =======================================================
 
+[Paper](https://ieeexplore.ieee.org/document/9768674) [Documentation](https://berkanlafci.github.io/pyruct/) [Dataset](https://doi.org/10.5281/zenodo.5599242)
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5599811.svg)](https://doi.org/10.5281/zenodo.5599811)
 
 Python Package for Reflection Ultrasound Computed Tomography (RUCT) Delay And Sum (DAS) Beamforming
@@ -12,7 +14,7 @@ Documentation website: https://berkanlafci.github.io/pyruct/
 Hex key test data link:  
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5599242.svg)](https://doi.org/10.5281/zenodo.5599242)
 
-The imaging setup is explained in these papers [Lafci, B. et al.](https://www.sciencedirect.com/science/article/pii/S1476558620301639), [Merčep, E. et al](https://www.nature.com/articles/s41377-019-0130-5). Synthetic Transmit Aperture (STA) method for pulse-echo ultrasound was used in data acquisition. All images were reconstructed using Delay And Sum (DAS) algorithm and compounded to create final high contrast images.
+The imaging setup is explained in the following paper [Lafci, B. et al.](https://ieeexplore.ieee.org/document/9768674). Synthetic Transmit Aperture (STA) method for pulse-echo ultrasound was used in data acquisition. All images were reconstructed using Delay And Sum (DAS) algorithm and compounded to create final high contrast images.
 
 Installation
 -------------------------------------------------------
@@ -46,25 +48,19 @@ imageRecon  = das.recon(usData.sigMat)         	# reconstruct image
 
 Data
 -------------------------------------------------------
-Test data will be made publicly available.
+Test data is publicly available [here](https://doi.org/10.5281/zenodo.5599242).
 
 After the download, place the data in "data/rawData/" folder that shares the same root directory with "exampleCpuDAS.py" script that can be run for testing "pyruct".
 
 Citation
 -------------------------------------------------------
-If you use this package in your research, please cite it as follows
+If you use this package in your research, please cite the following paper.
 
-Lafci, B., Robin, J., Dean-Ben, X. L., & Razansky, D. (2021). pyruct (Version 1.0.3) [Computer software]. https://doi.org/10.5281/zenodo.5599811
+B. Lafci, J. Robin, X. L. Deán-Ben and D. Razansky, "Expediting Image Acquisition in Reflection Ultrasound Computed Tomography," in IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control, doi: [10.1109/TUFFC.2022.3172713](https://ieeexplore.ieee.org/document/9768674).
 
 Acknowledgements
 -------------------------------------------------------
 This project is supported by Swiss Data Science Center (SDSC) grant C19-04.
-
-References
--------------------------------------------------------
-[1] Lafci, B., Merčep, E., Herraiz, J.L., Deán-Ben, X.L., Razansky, D. Noninvasive multiparametric characterization of mammary tumors with transmission-reflection optoacoustic ultrasound, Neoplasia, Volume 22, Issue 12, 2020, Pages 770-777, ISSN 1476-5586, https://doi.org/10.1016/j.neo.2020.10.008.
-
-[2] Merčep, E., Herraiz, J.L., Deán-Ben, X.L., Razansky, D. Transmission–reflection optoacoustic ultrasound (TROPUS) computed tomography of small animals. Light Sci Appl 8, 18 (2019). https://doi.org/10.1038/s41377-019-0130-5
 
 License
 -------------------------------------------------------
