@@ -3,18 +3,17 @@ pyruct
 
 [Paper](https://ieeexplore.ieee.org/document/9768674) -- [Documentation](https://berkanlafci.github.io/pyruct/) -- [Dataset](https://doi.org/10.5281/zenodo.5599242)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5599811.svg)](https://doi.org/10.5281/zenodo.5599811)
-
 Python Package for Reflection Ultrasound Computed Tomography (RUCT) Delay And Sum (DAS) Beamforming
 
+Package:  
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5599811.svg)](https://doi.org/10.5281/zenodo.5599811)
 
 Documentation website: https://berkanlafci.github.io/pyruct/ 
 
-<img src="https://github.com/berkanlafci/pyruct/blob/main/docs/_img/readmeImage.png" width="1000" height="180">
-
-Hex key test data link:  
+Hex key test data:  
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5599242.svg)](https://doi.org/10.5281/zenodo.5599242)
+
+<img src="https://github.com/berkanlafci/pyruct/blob/main/docs/_img/readmeImage.png" width="1000" height="180">
 
 The imaging setup is explained in the following paper [Lafci, B. et al.](https://ieeexplore.ieee.org/document/9768674). Synthetic Transmit Aperture (STA) method for pulse-echo ultrasound was used in data acquisition. All images were reconstructed using Delay And Sum (DAS) algorithm and compounded to create final high contrast images.
 
