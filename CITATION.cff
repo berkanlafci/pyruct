@@ -1,5 +1,5 @@
-cff-version: 1.0.3
-message: "If you use this package, please include citation."
+cff-version: 1.0.4
+message: "If you use this package, please cite it as below."
 authors:
 - family-names: "Lafci"
   given-names: "Berkan"
@@ -18,3 +18,27 @@ version: 1.0.3
 doi: 10.5281/zenodo.5599811
 date-released: 2021-11-23
 url: "https://github.com/berkanlafci/pyruct"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Lafci"
+    given-names: "Berkan"
+    orcid: "https://orcid.org/0000-0001-5387-1748"
+  - family-names: "Robin"
+    given-names: "Justine"
+    orcid: "https://orcid.org/0000-0002-4642-1375"
+  - family-names: "Dean-Ben"
+    given-names: "Xose Luis"
+    orcid: "https://orcid.org/0000-0002-8557-7778"
+  - family-names: "Razansky"
+    given-names: "Daniel"
+    orcid: "https://orcid.org/0000-0001-8676-0964"
+  doi: "10.1109/TUFFC.2022.3172713"
+  journal: "IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control"
+  month: 
+  start: 
+  end: 
+  title: "Expediting Image Acquisition in Reflection Ultrasound Computed Tomography"
+  issue: 
+  volume: 
+  year: 2022
