@@ -1,11 +1,13 @@
 pyruct
 =======================================================
 
-[Paper](https://ieeexplore.ieee.org/document/9768674) // [Documentation](https://berkanlafci.github.io/pyruct/) // [Dataset](https://doi.org/10.5281/zenodo.5599242)
+[Paper](https://ieeexplore.ieee.org/document/9768674) -- [Documentation](https://berkanlafci.github.io/pyruct/) -- [Dataset](https://doi.org/10.5281/zenodo.5599242)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5599811.svg)](https://doi.org/10.5281/zenodo.5599811)
 
 Python Package for Reflection Ultrasound Computed Tomography (RUCT) Delay And Sum (DAS) Beamforming
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5599811.svg)](https://doi.org/10.5281/zenodo.5599811)
 
 Documentation website: https://berkanlafci.github.io/pyruct/ 
 
