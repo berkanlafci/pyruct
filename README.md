@@ -8,17 +8,17 @@ pyruct
 
 Python Package for Reflection Ultrasound Computed Tomography (RUCT) Delay And Sum (DAS) Beamforming
 
-[Paper](https://ieeexplore.ieee.org/document/9768674) -- [Data](https://doi.org/10.5281/zenodo.6541837) -- [Documentation](https://berkanlafci.github.io/pyruct/)
+Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: [IEEE TUFFC Link](https://ieeexplore.ieee.org/document/9768674)  
+Documentation&nbsp;: [Website Link](https://berkanlafci.github.io/pyruct/)  
+Data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: [Zenodo Link](https://zenodo.org/record/6541837#.YrwUoHhByEJ)  
+
+<img src="https://github.com/berkanlafci/pyruct/blob/main/docs/_img/readmeImage.png" width="1000" height="180">
 
 Latest package release:  
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5599811.svg)](https://doi.org/10.5281/zenodo.5599811)
 
 Public dataset:  
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6541837.svg)](https://doi.org/10.5281/zenodo.6541837)
-
-Documentation website: https://berkanlafci.github.io/pyruct/ 
-
-<img src="https://github.com/berkanlafci/pyruct/blob/main/docs/_img/readmeImage.png" width="1000" height="180">
 
 The imaging setup is explained in the following paper [Lafci, B. et al.](https://ieeexplore.ieee.org/document/9768674) Synthetic Transmit Aperture (STA) method for pulse-echo ultrasound was used in data acquisition. All images were reconstructed using Delay And Sum (DAS) algorithm and compounded to create final high contrast images.
 
