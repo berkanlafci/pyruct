@@ -60,7 +60,7 @@ After the download, place the data in "data/rawData/" folder that shares the sam
 
 Citation
 -------------------------------------------------------
-If you use this package in your research, please cite the following paper.
+If you use this package and/or data in your research, please cite the following paper.
 
 B. Lafci, J. Robin, X. L. Deán-Ben and D. Razansky, "Expediting Image Acquisition in Reflection Ultrasound Computed Tomography," in IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control, doi: [10.1109/TUFFC.2022.3172713](https://ieeexplore.ieee.org/document/9768674).
 
