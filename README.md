@@ -64,10 +64,7 @@ If you use this package and/or data in your research, please cite the following 
 
 ```
 @article{lafci2022expediting,
-author	= {Lafci, Berkan and  
-	Robin, Justine and  
-	Deán-Ben, Xosé Luís and  
-	Razansky, Daniel},
+author	= {Lafci, Berkan and Robin, Justine and Deán-Ben, Xosé Luís and Razansky, Daniel},
 title 	= {Expediting Image Acquisition in Reflection Ultrasound Computed Tomography},
 journal = {IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control},
 year 	= {2022},
