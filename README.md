@@ -64,17 +64,17 @@ If you use this package and/or data in your research, please cite the following 
 
 ```
 @article{lafci2022expediting,
-	author		= {Lafci, Berkan and  
-				Robin, Justine and  
-				Deán-Ben, Xosé Luís and  
-				Razansky, Daniel},
-	title 		= {Expediting Image Acquisition in Reflection Ultrasound Computed Tomography},
-	journal 	= {IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control},
-	year 		= {2022},
-	volume 		= {69},
-	number 		= {10},
-	pages 		= {2837-2848},
-	doi         = {10.1109/TUFFC.2022.3172713}
+	author	= {Lafci, Berkan and  
+		Robin, Justine and  
+		Deán-Ben, Xosé Luís and  
+		Razansky, Daniel},
+	title 	= {Expediting Image Acquisition in Reflection Ultrasound Computed Tomography},
+	journal = {IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control},
+	year 	= {2022},
+	volume 	= {69},
+	number 	= {10},
+	pages 	= {2837-2848},
+	doi 	= {10.1109/TUFFC.2022.3172713}
 }
 ```
 
