@@ -62,6 +62,7 @@ Citation
 -------------------------------------------------------
 If you use this package and/or data in your research, please cite the following paper.
 
+```
 @article{lafci2022expediting,
   author      = {Lafci, Berkan and 
                 Robin, Justine and 
