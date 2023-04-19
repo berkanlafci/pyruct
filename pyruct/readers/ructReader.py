@@ -16,7 +16,7 @@ class usReader():
     """
     Ultrasound data reader for RUCT system
 
-    :param folderPath:      3D array (samples x channels x repetition) of signals
+    :param folderPath:      Path to data folder
     :param scanName:        Name of data file inside the folder
 
     :return:                usReader object
