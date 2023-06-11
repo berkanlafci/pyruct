@@ -54,7 +54,7 @@ imageRecon  = das.recon(usData.sigMat)         	# reconstruct image
 
 Data
 -------------------------------------------------------
-Data used in the paper is available [here](https://doi.org/10.5281/zenodo.6541837).
+Data used in the paper is available [here](https://doi.org/10.5281/zenodo.6541837).  
 Test data is publicly available [here](https://doi.org/10.5281/zenodo.5599242).
 
 After the download, place the data in "data/rawData/" folder that shares the same root directory with "exampleCpuDAS.py" script that can be run for testing "pyruct".
